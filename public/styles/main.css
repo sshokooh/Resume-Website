@@ -1,0 +1,114 @@
+*{margin:0;padding:0;}
+:root {
+    --bg-color:  #E2E2E9;
+    --color1: #43ADEC;
+    --color2: #327C73;
+    --color3: #5F754F;
+    --color4: #06477B;
+}
+body{background-color: var(--bg-color);}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+nav{
+    position: sticky;
+    display: flex;
+    flex-flow: wrap-reverse;
+    justify-content: center;
+    white-space: nowrap;
+    text-align: center;
+    background: var(--color1);
+    top: 0;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-top: 1px solid var(--color2);  
+    border-bottom: 1px solid var(--color2);
+    z-index: 2;
+}
+.nav-buttons{display: inline-block;}
+nav ol{
+    list-style-type: none;
+}
+nav a {
+    font-family: Hack, monospace;
+    font-size: 16pt;
+    border-radius: 1px;
+    border-width: 0px;
+    text-decoration: none;
+    color: var(--color4);
+    padding-left: 6px;
+    padding-right: 6px;
+}
+nav a:hover {
+    background-color: var(--color1);
+    cursor: pointer;
+}
+#self-pic{
+    align-self: center;
+    width: 30%;
+    max-width: 300px;
+    padding-top: 30px;
+    transition: all .3s cubic-bezier(0.65, 0, 0.35, 1);
+    z-index: 1; 
+}
+#self-pic img{
+    width: 100%;
+    height: auto;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 1000px;
+    border-color: #2E5266;
+}
+#bio{
+    margin: 0 20%;
+    text-align: center;
+    padding-top: 4%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 26px;
+    line-height: 1.5em;
+}
+.code{
+    font-family: Hack, monospace;
+    font-size: 90%;
+}
+@media (max-width: 600px){
+    nav {
+        position: fixed;
+        flex-flow: column wrap;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        transition: top 0.48s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+    .nav-buttons{
+        display: block;
+    }
+    nav a { 
+        text-align: center; 
+        padding: 10px;
+        border-top: 1px solid rgba(255,255,255,0.3); 
+        border-bottom: 1px solid var(--color4); 
+        
+        display: block;
+    }
+    nav a:hover {
+        background-color: var(--color1);
+        outline:none;
+    }
+    .nav-up {top: -35%;}
+    .nav-down{top: 0;}
+    .scale-up{transform: scale(1.4) translate(0, -15%);}
+    .scale-down{transform: scale(1.0)}
+    #self-pic{
+        padding-top: 2px;
+        margin-top: 40%;
+    }
+    #bio{
+        margin: 10px 5%;
+        font-size: 20px;
+    }
+}
+
+

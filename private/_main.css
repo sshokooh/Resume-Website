@@ -37,7 +37,7 @@ nav {
     padding-bottom: 6px;
     border-top: 1px solid var(--color2);  
     border-bottom: 1px solid var(--color2);
-
+    
 
     display: flex;
     
@@ -62,15 +62,18 @@ nav a:hover {
     background-color: var(--color1);
     cursor: pointer;
 }
+
 div{
     word-wrap: break-word;
     font-family: Hack, monospace;
 }
 #main-container{
-    height: auto; width:100%; overflow: visible;
+    height: auto; 
+    width:100%; 
+    overflow: visible;
     display: flex;
     flex-direction: column;
-    margin-top: 20px
+    margin-top: 20px;
 }
 
 .pic-div {
@@ -89,7 +92,8 @@ div{
     border-width: 3px;
     border-radius: 1000px;
     border-color: #2E5266;
-   
+    transition: all .2s ease-in-out;
+    z-index: 1;
 }
 
 #bio-div{
@@ -105,7 +109,7 @@ div{
 }
 #bio-div p{
     padding-top: 10px;
-    
+    margin-top: 10px;
     align-self: center;
     text-indent: 3em;
     line-height: 2em;
@@ -118,12 +122,8 @@ em {
     text-align: center;
     
 }
-@media all and (max-width: 800px) {
-    nav {
-      justify-content: space-around;
-    }
-}
-  
+
+  /*
 @media all and (max-width: 600px) {
     nav {
         position: fixed;
@@ -134,6 +134,9 @@ em {
     .nav-up {
         top: -21%;
     }
+    .nav-down{
+        top: 0%;
+    }
     
     nav a { 
       text-align: center; 
@@ -142,15 +145,25 @@ em {
       border-bottom: 1px solid rgba(0,0,0,0.1); 
     }
 }
-@media screen and (max-width: 481px){
 
+@media screen and (max-width: 481px){ 
+*/
+@media all and (max-width: 600px) {
     nav {
+        position: fixed;
         -webkit-flex-flow: column wrap;
         flex-flow: column wrap;
         padding: 0;
         width: 100%;
         height: auto;
         transition: top 0.18s ease-in;
+        z-index: 2;
+    }
+    .nav-up {
+        top: -25%;
+    }
+    .nav-down{
+        top: 0%;
     }
       
     nav a { 
@@ -195,7 +208,7 @@ em {
         height: auto; width:100%; overflow: visible;
         display: flex;
         flex-direction: column;
-        margin-top: 10px
+        margin-top: 25px
     }
     #self-pic{
         display: block;
