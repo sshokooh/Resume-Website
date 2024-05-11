@@ -1,10 +1,17 @@
 *{margin:0;padding:0;}
-:root {
+/* :root {
     --bg-color:  #E2E2E9;
     --color1: #43ADEC;
     --color2: #327C73;
     --color3: #5F754F;
     --color4: #06477B;
+} */
+:root {
+    --bg-color:  #E2E2E9;
+    --color1: #6C94B8;
+    --color2: #0A122B;
+    --color3: #0A122B;
+    --color4: #404B4D;
 }
 body{background-color: var(--bg-color);}
 main{
@@ -47,8 +54,8 @@ nav a:hover {
 }
 #self-pic{
     align-self: center;
-    width: 30%;
-    max-width: 300px;
+    width: 50%;
+    max-width: 500px;
     padding-top: 30px;
     transition: all .3s cubic-bezier(0.65, 0, 0.35, 1);
     z-index: 1; 
