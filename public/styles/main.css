@@ -7,11 +7,11 @@
     --color4: #06477B;
 } */
 :root {
-    --bg-color:  #E2E2E9;
-    --color1: #6C94B8;
-    --color2: #0A122B;
+    --bg-color:  #EBF5FCff;
+    --color1: #6793B6ff;
+    --color2: #1F3533ff;
     --color3: #0A122B;
-    --color4: #404B4D;
+    --color4: #00122Dff;
 }
 body{background-color: var(--bg-color);}
 main{
@@ -51,6 +51,9 @@ nav a {
 nav a:hover {
     background-color: var(--color1);
     cursor: pointer;
+}
+nav a:visited {
+    color: inherit;
 }
 #self-pic{
     align-self: center;
